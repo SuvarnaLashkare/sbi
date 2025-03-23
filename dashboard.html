@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - SBI Online Banking</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <meta name="description" content="SBI Online Banking Dashboard - Manage your accounts, transfer funds, and more.">
+</head>
+<body>
+  <div class="page-wrapper dashboard-wrapper">
+    <!-- Header -->
+    <header class="header dashboard-header">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="logo">
+            <a href="dashboard.html">
+              <img src="/placeholder.svg?height=40&width=120" alt="SBI Logo" class="logo-light">
+              <img src="/placeholder.svg?height=40&width=120" alt="SBI Logo" class="logo-dark">
+            </a>
+          </div>
+          
+          <div class="header-actions">
+            <div class="last-login">
+              <span>Last Login: 15 Oct 2023, 10:30 AM</span>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+              <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+              <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+            <div class="user-menu">
+              <button class="user-menu-toggle" id="user-menu-toggle">
+                <div class="user-avatar">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                <span class="user-name">Rahul Sharma</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div class="user-dropdown" id="user-dropdown">
+                <ul>
+                  <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Profile</a></li>
+                  <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Security</a></li>
+                  <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg> Settings</a></li>
+                  <li class="divider"></li>
+                  <li><a href="index.html" class="logout-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg> Logout</a></li>
+                </ul>
+              </div>
+            </div>
+            <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <h2>SBI Banking</h2>
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li class="active">
+              <a href="dashboard.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                <span>Accounts</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <span>Fund Transfer</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10V4a2 2 0 0 1 2-2h8.5L20 7.5V20a2 2 0 0 1-2 2H4"/><polyline points="14 2 14 8 20 8"/><path d="M10.29 10.7a2.43 2.43 0 0 0-2.66-.52c-.29.12-.56.3-.78.53l-.35.34-.35-.34a2.43 2.43 0 0 0-2.65-.53c-.3.12-.56.3-.79.53-.95.94-1 2.53.2 3.74L6.5 18l3.6-3.55c1.2-1.21 1.14-2.8.19-3.74Z"/></svg>
+                <span>Bill Payments</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v13H3V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg>
+                <span>Fixed Deposits</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+                <span>Statements</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                <span>Loans</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span>Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                <span>Security</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+                <span>Help & Support</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="dashboard-content">
+        <div class="dashboard-header">
+          <h1>Welcome, Rahul Sharma</h1>
+          <p class="greeting">Good morning! Here's your financial summary.</p>
+        </div>
+
+        <!-- Account Summary -->
+        <section class="account-summary">
+          <div class="section-header">
+            <h2>Account Summary</h2>
+            <a href="#" class="view-all">View All Accounts</a>
+          </div>
+          <div class="accounts-grid">
+            <div class="account-card">
+              <div class="account-type">Savings Account</div>
+              <div class="account-number">XXXX XXXX 1234</div>
+              <div class="account-balance">₹1,25,430.75</div>
+              <div class="account-actions">
+                <a href="#" class="btn btn-sm">View Details</a>
+                <a href="#" class="btn btn-sm btn-outline">Statement</a>
+              </div>
+            </div>
+            <div class="account-card">
+              <div class="account-type">Current Account</div>
+              <div class="account-number">XXXX XXXX 5678</div>
+              <div class="account-balance">₹3,45,670.50</div>
+              <div class="account-actions">
+                <a href="#" class="btn btn-sm">View Details</a>
+                <a href="#" class="btn btn-sm btn-outline">Statement</a>
+              </div>
+            </div>
+            <div class="account-card">
+              <div class="account-type">Fixed Deposit</div>
+              <div class="account-number">XXXX XXXX 9012</div>
+              <div class="account-balance">₹5,00,000.00</div>
+              <div class="account-actions">
+                <a href="#" class="btn btn-sm">View Details</a>
+                <a href="#" class="btn btn-sm btn-outline">Statement</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+          <h2>Quick Actions</h2>
+          <div class="actions-grid">
+            <a href="#" class="action-card">
+              <div class="action-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <span>Transfer Money</span>
+            </a>
+            <a href="#" class="action-card">
+              <div class="action-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10V4a2 2 0 0 1 2-2h8.5L20 7.5V20a2 2 0 0 1-2 2H4"/><polyline points="14 2 14 8 20 8"/><path d="M10.29 10.7a2.43 2.43 0 0 0-2.66-.52c-.29.12-.56.3-.78.53l-.35.34-.35-.34a2.43 2.43 0 0 0-2.65-.53c-.3.12-.56.3-.79.53-.95.94-1 2.53.2 3.74L6.5 18l3.6-3.55c1.2-1.21 1.14-2.8.19-3.74Z"/></svg>
+              </div>
+              <span>Pay Bills</span>
+            </a>
+            <a href="#" class="action-card">
+              <div class="action-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v13H3V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg>
+              </div>
+              <span>New Deposit</span>
+            </a>
+            <a href="#" class="action-card">
+              <div class="action-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+              </div>
+              <span>Download Statement</span>
+            </a>
+          </div>
+        </section>
+
+        <div class="dashboard-row">
+          <!-- Recent Transactions -->
+          <section class="recent-transactions">
+            <div class="section-header">
+              <h2>Recent Transactions</h2>
+              <a href="#" class="view-all">View All</a>
+            </div>
+            <div class="transactions-list">
+              <div class="transaction-item">
+                <div class="transaction-icon debit">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+                </div>
+                <div class="transaction-details">
+                  <div class="transaction-title">Amazon Payment</div>
+                  <div class="transaction-date">15 Oct 2023</div>
+                </div>
+                <div class="transaction-amount debit">- ₹2,500.00</div>
+              </div>
+              <div class="transaction-item">
+                <div class="transaction-icon credit">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+                </div>
+                <div class="transaction-details">
+                  <div class="transaction-title">Salary Credit</div>
+                  <div class="transaction-date">01 Oct 2023</div>
+                </div>
+                <div class="transaction-amount credit">+ ₹75,000.00</div>
+              </div>
+              <div class="transaction-item">
+                <div class="transaction-icon debit">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+                </div>
+                <div class="transaction-details">
+                  <div class="transaction-title">Electricity Bill</div>
+                  <div class="transaction-date">28 Sep 2023</div>
+                </div>
+                <div class="transaction-amount debit">- ₹1,850.00</div>
+              </div>
+              <div class="transaction-item">
+                <div class="transaction-icon debit">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+                </div>
+                <div class="transaction-details">
+                  <div class="transaction-title">Mobile Recharge</div>
+                  <div class="transaction-date">25 Sep 2023</div>
+                </div>
+                <div class="transaction-amount debit">- ₹999.00</div>
+              </div>
+              <div class="transaction-item">
+                <div class="transaction-icon credit">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+                </div>
+                <div class="transaction-details">
+                  <div class="transaction-title">Interest Credit</div>
+                  <div class="transaction-date">20 Sep 2023</div>
+                </div>
+                <div class="transaction-amount credit">+ ₹1,250.75</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Upcoming Payments -->
+          <section class="upcoming-payments">
+            <div class="section-header">
+              <h2>Upcoming Payments</h2>
+              <a href="#" class="view-all">View All</a>
+            </div>
+            <div class="payments-list">
+              <div class="payment-item">
+                <div class="payment-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10V4a2 2 0 0 1 2-2h8.5L20 7.5V20a2 2 0 0 1-2 2H4"/><polyline points="14 2 14 8 20 8"/><path d="M10.29 10.7a2.43 2.43 0 0 0-2.66-.52c-.29.12-.56.3-.78.53l-.35.34-.35-.34a2.43 2.43 0 0 0-2.65-.53c-.3.12-.56.3-.79.53-.95.94-1 2.53.2 3.74L6.5 18l3.6-3.55c1.2-1.21 1.14-2.8.19-3.74Z"/></svg>
+                </div>
+                <div class="payment-details">
+                  <div class="payment-title">Home Loan EMI</div>
+                  <div class="payment-date">Due on 20 Oct 2023</div>
+                </div>
+                <div class="payment-amount">₹15,000.00</div>
+              </div>
+              <div class="payment-item">
+                <div class="payment-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10V4a2 2 0 0 1 2-2h8.5L20 7.5V20a2 2 0 0 1-2 2H4"/><polyline points="14 2 14 8 20 8"/><path d="M10.29 10.7a2.43 2.43 0 0 0-2.66-.52c-.29.12-.56.3-.78.53l-.35.34-.35-.34a2.43 2.43 0 0 0-2.65-.53c-.3.12-.56.3-.79.53-.95.94-1 2.53.2 3.74L6.5 18l3.6-3.55c1.2-1.21 1.14-2.8.19-3.74Z"/></svg>
+                </div>
+                <div class="payment-details">
+                  <div class="payment-title">Credit Card Bill</div>
+                  <div class="payment-date">Due on 25 Oct 2023</div>
+                </div>
+                <div class="payment-amount">₹8,750.00</div>
+              </div>
+              <div class="payment-item">
+                <div class="payment-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10V4a2 2 0 0 1 2-2h8.5L20 7.5V20a2 2 0 0 1-2 2H4"/><polyline points="14 2 14 8 20 8"/><path d="M10.29 10.7a2.43 2.43 0 0 0-2.66-.52c-.29.12-.56.3-.78.53l-.35.34-.35-.34a2.43 2.43 0 0 0-2.65-.53c-.3.12-.56.3-.79.53-.95.94-1 2.53.2 3.74L6.5 18l3.6-3.55c1.2-1.21 1.14-2.8.19-3.74Z"/></svg>
+                </div>
+                <div class="payment-details">
+                  <div class="payment-title">Insurance Premium</div>
+                  <div class="payment-date">Due on 30 Oct 2023</div>
+                </div>
+                <div class="payment-amount">₹5,200.00</div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Financial Insights -->
+        <section class="financial-insights">
+          <div class="section-header">
+            <h2>Financial Insights</h2>
+          </div>
+          <div class="insights-grid">
+            <div class="insight-card">
+              <h3>Monthly Spending</h3>
+              <div class="chart-container">
+                <img src="/placeholder.svg?height=200&width=300" alt="Monthly Spending Chart">
+              </div>
+              <div class="insight-summary">
+                <p>Your spending is 15% lower than last month.</p>
+              </div>
+            </div>
+            <div class="insight-card">
+              <h3>Savings Growth</h3>
+              <div class="chart-container">
+                <img src="/placeholder.svg?height=200&width=300" alt="Savings Growth Chart">
+              </div>
+              <div class="insight-summary">
+                <p>Your savings have grown by 8% in the last 3 months.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Offers & Promotions -->
+        <section class="offers-promotions">
+          <div class="section-header">
+            <h2>Offers & Promotions</h2>
+            <a href="#" class="view-all">View All</a>
+          </div>
+          <div class="offers-grid">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="/placeholder.svg?height=120&width=280" alt="Credit Card Offer">
+              </div>
+              <div class="offer-content">
+                <h3>0% Interest on Credit Card EMI</h3>
+                <p>Convert purchases above ₹5,000 to EMI with zero interest for 3 months.</p>
+                <a href="#" class="btn btn-sm">Learn More</a>
+              </div>
+            </div>
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="/placeholder.svg?height=120&width=280" alt="Personal Loan Offer">
+              </div>
+              <div class="offer-content">
+                <h3>Personal Loan at 8.5% p.a.</h3>
+                <p>Special rate for existing customers. Apply now for instant approval.</p>
+                <a href="#" class="btn btn-sm">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer dashboard-footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>&copy; 2023 State Bank of India. All rights reserved.</p>
+          <ul class="footer-links">
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
+

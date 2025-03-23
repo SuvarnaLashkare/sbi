@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SBI Online Banking - Secure Internet Banking</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <meta name="description" content="State Bank of India's secure internet banking portal. Access your accounts, transfer funds, pay bills, and more.">
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="logo">
+            <a href="index.html">
+              <img src="/placeholder.svg?height=40&width=120" alt="SBI Logo" class="logo-light">
+              <img src="/placeholder.svg?height=40&width=120" alt="SBI Logo" class="logo-dark">
+            </a>
+          </div>
+          
+          <nav class="main-nav" id="main-nav">
+            <ul>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="#">Personal Banking</a></li>
+              <li><a href="#">Corporate Banking</a></li>
+              <li><a href="#">NRI Banking</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          
+          <div class="header-actions">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+              <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+              <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+            <a href="login.html" class="btn btn-primary">Login</a>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Welcome to SBI Online Banking</h1>
+            <p>Secure, convenient, and reliable banking at your fingertips</p>
+            <div class="hero-cta">
+              <a href="login.html" class="btn btn-primary btn-lg">Login to Internet Banking</a>
+              <a href="#" class="btn btn-outline btn-lg">Register Now</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="/placeholder.svg?height=400&width=500" alt="SBI Online Banking">
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Links -->
+      <section class="quick-links">
+        <div class="container">
+          <h2 class="section-title">Quick Access</h2>
+          <div class="quick-links-grid">
+            <a href="#" class="quick-link-card">
+              <div class="quick-link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+              </div>
+              <h3>Account Summary</h3>
+            </a>
+            <a href="#" class="quick-link-card">
+              <div class="quick-link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <h3>Fund Transfer</h3>
+            </a>
+            <a href="#" class="quick-link-card">
+              <div class="quick-link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10V4a2 2 0 0 1 2-2h8.5L20 7.5V20a2 2 0 0 1-2 2H4"/><polyline points="14 2 14 8 20 8"/><path d="M10.29 10.7a2.43 2.43 0 0 0-2.66-.52c-.29.12-.56.3-.78.53l-.35.34-.35-.34a2.43 2.43 0 0 0-2.65-.53c-.3.12-.56.3-.79.53-.95.94-1 2.53.2 3.74L6.5 18l3.6-3.55c1.2-1.21 1.14-2.8.19-3.74Z"/></svg>
+              </div>
+              <h3>Bill Payments</h3>
+            </a>
+            <a href="#" class="quick-link-card">
+              <div class="quick-link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v13H3V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg>
+              </div>
+              <h3>Fixed Deposits</h3>
+            </a>
+            <a href="#" class="quick-link-card">
+              <div class="quick-link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+              </div>
+              <h3>Statement</h3>
+            </a>
+            <a href="#" class="quick-link-card">
+              <div class="quick-link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              </div>
+              <h3>Loans</h3>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features">
+        <div class="container">
+          <h2 class="section-title">Banking Made Simple</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3>Secure Banking</h3>
+              <p>Advanced encryption and multi-factor authentication to keep your accounts safe</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V8"/><path d="m5 12 7-4 7 4"/><path d="M5 16l7-4 7 4"/><path d="M5 20l7-4 7 4"/></svg>
+              </div>
+              <h3>24/7 Banking</h3>
+              <p>Access your accounts and perform transactions anytime, anywhere</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h1"/><path d="M17 3h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1"/><path d="M12 12v9"/><path d="M8 17h8"/><path d="M12 3v9"/></svg>
+              </div>
+              <h3>Instant Transfers</h3>
+              <p>Send money instantly to any bank account with IMPS, NEFT, and RTGS</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+              </div>
+              <h3>Personalized Services</h3>
+              <p>Tailored banking solutions to meet your unique financial needs</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Security Tips -->
+      <section class="security-tips">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Banking Security Tips</h2>
+          </div>
+          <div class="tips-slider" id="security-tips-slider">
+            <div class="tip-card">
+              <div class="tip-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16V4a2 2 0 0 1 2-2h11"/><path d="M5 14H4a2 2 0 1 0 0 4h1"/><path d="M22 18H11a2 2 0 1 0 0 4h11"/><path d="M15 12V5a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v7"/><path d="M17 12V5a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v7"/><path d="M12 16v4"/><path d="M19 16v4"/></svg>
+              </div>
+              <h3>Never Share OTP</h3>
+              <p>SBI or its representatives will never ask for your OTP, PIN, or password. Never share these details with anyone.</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <h3>Verify Website URL</h3>
+              <p>Always check that you're on the official SBI website before entering your credentials. Look for 'https' and the lock icon.</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-3 3l2-2m-2 2l2 2m-2-2l-5 5-3-3-3 3V7h4l3-3 3 3z"/><path d="M22 12v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6"/></svg>
+              </div>
+              <h3>Use Strong Passwords</h3>
+              <p>Create strong, unique passwords for your banking accounts and change them regularly.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- App Promotion -->
+      <section class="app-promotion">
+        <div class="container">
+          <div class="app-content">
+            <div class="app-info">
+              <h2>Banking on the Go</h2>
+              <p>Download the SBI YONO app for a seamless banking experience on your mobile device.</p>
+              <ul class="app-features">
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  Quick and secure login with biometrics
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  Transfer funds with just a few taps
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  Pay bills and manage subscriptions
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  Apply for loans and credit cards
+                </li>
+              </ul>
+              <div class="app-buttons">
+                <a href="#" class="app-button">
+                  <img src="/placeholder.svg?height=40&width=120" alt="Get it on Google Play">
+                </a>
+                <a href="#" class="app-button">
+                  <img src="/placeholder.svg?height=40&width=120" alt="Download on App Store">
+                </a>
+              </div>
+            </div>
+            <div class="app-image">
+              <img src="/placeholder.svg?height=500&width=250" alt="SBI YONO App">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Ready to Experience Better Banking?</h2>
+            <p>Join millions of customers who trust SBI for their banking needs</p>
+            <div class="cta-buttons">
+              <a href="login.html" class="btn btn-primary btn-lg">Login Now</a>
+              <a href="#" class="btn btn-outline btn-lg">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-column">
+            <h4>Personal Banking</h4>
+            <ul>
+              <li><a href="#">Accounts</a></li>
+              <li><a href="#">Cards</a></li>
+              <li><a href="#">Loans</a></li>
+              <li><a href="#">Investments</a></li>
+              <li><a href="#">Insurance</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Digital Banking</h4>
+            <ul>
+              <li><a href="#">Internet Banking</a></li>
+              <li><a href="#">Mobile Banking</a></li>
+              <li><a href="#">YONO</a></li>
+              <li><a href="#">UPI</a></li>
+              <li><a href="#">BHIM SBI Pay</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>About Us</h4>
+            <ul>
+              <li><a href="#">About SBI</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">CSR</a></li>
+              <li><a href="#">Sustainability</a></li>
+              <li><a href="#">Investor Relations</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Help & Support</h4>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Customer Care</a></li>
+              <li><a href="#">Grievance Redressal</a></li>
+              <li><a href="#">Safe Banking</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Connect With Us</h4>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="#" aria-label="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+              <a href="#" aria-label="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+              </a>
+            </div>
+            <div class="contact-info">
+              <p>24x7 Customer Care: 1800-425-3800</p>
+              <p>Toll Free: 1800-11-2211</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 State Bank of India. All rights reserved.</p>
+          <ul class="footer-links">
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+

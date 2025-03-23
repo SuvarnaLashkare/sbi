@@ -1,0 +1,521 @@
+/* Dashboard Styles */
+.dashboard-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-header {
+  background-color: var(--color-header-bg);
+  box-shadow: 0 2px 10px var(--color-shadow);
+}
+
+.last-login {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.user-menu {
+  position: relative;
+}
+
+.user-menu-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--color-foreground);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.user-menu-toggle:hover {
+  background-color: var(--color-secondary);
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.user-name {
+  font-weight: 500;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px var(--color-shadow);
+  z-index: 100;
+  display: none;
+}
+
+.user-dropdown.active {
+  display: block;
+}
+
+.user-dropdown ul {
+  padding: 0.5rem 0;
+}
+
+.user-dropdown ul li {
+  padding: 0;
+}
+
+.user-dropdown ul li a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: var(--color-foreground);
+  transition: background-color 0.2s ease;
+}
+
+.user-dropdown ul li a:hover {
+  background-color: var(--color-secondary);
+}
+
+.user-dropdown ul li.divider {
+  height: 1px;
+  background-color: var(--color-border);
+  margin: 0.5rem 0;
+}
+
+.logout-link {
+  color: var(--color-danger) !important;
+}
+
+.sidebar-toggle {
+  display: flex;
+}
+
+.dashboard-container {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: var(--color-sidebar-bg);
+  border-right: 1px solid var(--color-border);
+  height: calc(100vh - 64px);
+  position: sticky;
+  top: 64px;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sidebar-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+}
+
+.sidebar-nav ul li {
+  margin-bottom: 0.25rem;
+}
+
+.sidebar-nav ul li a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  color: var(--color-foreground);
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-nav ul li a:hover {
+  background-color: var(--color-sidebar-active);
+}
+
+.sidebar-nav ul li.active a {
+  background-color: var(--color-sidebar-active);
+  color: var(--color-primary);
+  font-weight: 500;
+  border-left: 3px solid var(--color-primary);
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: var(--color-secondary);
+}
+
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-foreground);
+}
+
+.greeting {
+  color: var(--color-muted);
+}
+
+/* Account Summary */
+.account-summary {
+  margin-bottom: 2rem;
+}
+
+.accounts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.account-card {
+  background-color: var(--color-card-bg);
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.account-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px var(--color-shadow);
+}
+
+.account-type {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-foreground);
+}
+
+.account-number {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  margin-bottom: 1rem;
+}
+
+.account-balance {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--color-foreground);
+}
+
+.account-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Quick Actions */
+.quick-actions {
+  margin-bottom: 2rem;
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  background-color: var(--color-card-bg);
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px var(--color-shadow);
+  color: var(--color-primary);
+}
+
+.action-icon {
+  color: var(--color-primary);
+}
+
+/* Dashboard Row */
+.dashboard-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Recent Transactions */
+.recent-transactions {
+  background-color: var(--color-card-bg);
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  padding: 1.5rem;
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.transaction-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.transaction-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transaction-icon.debit {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--color-danger);
+}
+
+.transaction-icon.credit {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: var(--color-success);
+}
+
+.transaction-details {
+  flex: 1;
+}
+
+.transaction-title {
+  font-weight: 500;
+  color: var(--color-foreground);
+}
+
+.transaction-date {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.transaction-amount {
+  font-weight: 600;
+}
+
+.transaction-amount.debit {
+  color: var(--color-danger);
+}
+
+.transaction-amount.credit {
+  color: var(--color-success);
+}
+
+/* Upcoming Payments */
+.upcoming-payments {
+  background-color: var(--color-card-bg);
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  padding: 1.5rem;
+}
+
+.payments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.payment-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.payment-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.payment-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 193, 7, 0.1);
+  color: var(--color-warning);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-details {
+  flex: 1;
+}
+
+.payment-title {
+  font-weight: 500;
+  color: var(--color-foreground);
+}
+
+.payment-date {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.payment-amount {
+  font-weight: 600;
+  color: var(--color-foreground);
+}
+
+/* Financial Insights */
+.financial-insights {
+  margin-bottom: 2rem;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1.5rem;
+}
+
+.insight-card {
+  background-color: var(--color-card-bg);
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  padding: 1.5rem;
+}
+
+.insight-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-foreground);
+}
+
+.chart-container {
+  margin-bottom: 1rem;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.insight-summary {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+/* Offers & Promotions */
+.offers-promotions {
+  margin-bottom: 2rem;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.offer-card {
+  background-color: var(--color-card-bg);
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.offer-image {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secondary);
+}
+
+.offer-content {
+  padding: 1.5rem;
+}
+
+.offer-content h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-foreground);
+}
+
+.offer-content p {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  margin-bottom: 1rem;
+}
+
+.dashboard-footer {
+  padding: 1.5rem 0;
+}
+
+/* Responsive Dashboard */
+@media (max-width: 992px) {
+  .dashboard-row {
+    grid-template-columns: 1fr;
+  }
+
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -250px;
+    z-index: 1000;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .sidebar-toggle {
+    display: flex;
+  }
+
+  .dashboard-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .accounts-grid,
+  .actions-grid,
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
